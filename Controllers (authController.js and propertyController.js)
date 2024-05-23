@@ -1,0 +1,31 @@
+
+
+// authController.js
+const User = require('../models/User');
+
+exports.registerUser = async (req, res) => {
+  // Handle user registration logic
+};
+
+exports.loginUser = async (req, res) => {
+  // Handle user login logic
+};
+
+// propertyController.js
+const Property = require('../models/Property');
+
+exports.getProperties = async (req, res) => {
+  // Get all properties logic
+};
+
+exports.createProperty = async (req, res) => {
+  // Create property logic
+};
+
+exports.updateProperty = async (req, res) => {
+  // Update property logic
+};
+
+exports.deleteProperty = async (req, res) => {
+  // Delete property logic
+};
