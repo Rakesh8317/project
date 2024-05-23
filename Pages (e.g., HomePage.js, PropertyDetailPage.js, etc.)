@@ -1,0 +1,27 @@
+// HomePage.js
+import React, { useEffect, useState } from 'react';
+import PropertyList from './PropertyList';
+import { getProperties } from '../api';
+
+const HomePage = () => {
+  const [properties, setProperties] = useState([]);
+
+  useEffect(() => {
+    const fetchProperties = async () => {
+      const data = await getProperties();
+      if (data) {
+        setProperties(data);
+      }
+    };
+    fetchProperties();
+  }, []);
+
+  return (
+    <div>
+      <h1>Rental Properties</h1>
+      <PropertyList properties={properties} />
+    </div>
+  );
+};
+
+export default HomePage;
