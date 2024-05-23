@@ -1,0 +1,17 @@
+// PropertyList.js
+import React from 'react';
+
+const PropertyList = ({ properties }) => {
+  return (
+    <div>
+      {properties.map(property => (
+        <div key={property.id}>
+          <h3>{property.title}</h3>
+          <p>{property.description}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default PropertyList;
